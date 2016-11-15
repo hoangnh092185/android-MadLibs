@@ -14,8 +14,6 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.funRadioButton) RadioButton mFunRadioButton;
-    @Bind(R.id.holidayRadioButton) RadioButton mHolidayRadioButton;
     @Bind(R.id.playButton) Button mPlayButton;
     @Bind(R.id.playSelectGroup) RadioGroup mRadioGroup;
 
@@ -24,8 +22,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mFunRadioButton.setOnClickListener(this);
-        mHolidayRadioButton.setOnClickListener(this);
         mPlayButton.setOnClickListener(this);
     }
 
