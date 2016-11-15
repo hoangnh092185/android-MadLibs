@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:id="@+id/textView2" />
+        android:id="@+id/appNameTextView" />
 
     <Button
         android:layout_width="match_parent"
@@ -66,5 +66,58 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:src="@drawable/backgroundimage"
-        android:scaleType="centerCrop" />
+        android:scaleType="centerCrop"
+        android:longClickable="true" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/whateverPlayButton"
+        android:id="@+id/playSelectGroup"
+        android:orientation="vertical">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Holiday Mab Libs"
+            android:id="@+id/holidayRadioButton"
+            android:layout_below="@+id/whateverPlayButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fun Mab LIbs"
+            android:id="@+id/funRadioButton"
+            android:layout_below="@+id/radioButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PlaceHolder Mad LIbs"
+            android:id="@+id/placeHolderRadioButton"
+            android:layout_below="@+id/radioButton2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:checked="false"
+            android:background="@color/colorAccent"
+            android:textColor="@color/colorPrimaryText"
+            android:layout_marginTop="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RadioGroup>
 </RelativeLayout>
