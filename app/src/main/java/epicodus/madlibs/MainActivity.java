@@ -30,8 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent;
         if(v == mPlayButton) {
             int selectedId = mRadioGroup.getCheckedRadioButtonId();
-            RadioButton selectedRadioButton = (RadioButton) findViewById(selectedId);
-            switch (selectedRadioButton.getId()) {
+            switch (selectedId) {
                 case R.id.funRadioButton:
                     intent = new Intent(MainActivity.this, AddWordsActivity.class);
                     startActivity(intent);
