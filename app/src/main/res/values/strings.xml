@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MadLibs</string>
+    <string name="normal">Today a %1$s named %2$s came to our school to talk to us about her job. She said the most important skill you need to know to do her job is to be able to %3$s around (a) %4$s %5$s. She said it was easy for her to learn her job because she loved to %6$s when she was my age--and that helps a lot! If you\'re considering her profession, I hope you can be near (a) %7$s %8$s. That\'s very important! If you get too distracted in that situation you won\'t be able to %9$s next to (a) %10$s!</string>
+    <string name="holiday">THIS IS A NEW HOLIDAY MAB LIBS %1$s &lt;--NEW named came to our school to talk to us about her job. She said the most important skill you need to know to do her job is to be able to %2$s &lt;--NEW around (a) %3$s %4$s. She said it was easy for her to learn her job because she loved to %5$s when she was my age--and that helps a lot! If you\'re considering her profession, I hope you can be near (a) %6$s. &lt;--NEW That\'s very important! If you get too distracted in that situation you won\'t be able to %7$s &lt;--NEW next to (a) %8$s &lt;--NEW !</string>
 </resources>
