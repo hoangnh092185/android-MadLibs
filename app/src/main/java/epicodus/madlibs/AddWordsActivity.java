@@ -35,16 +35,17 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         if(v == mSubmitButton) {
             Intent intent = new Intent(AddWordsActivity.this, ShowStoryActivity.class);
-            intent.putExtra("editOccupation", mEditOccupation.getText().toString());
-            intent.putExtra("editNoun1", mEditNoun1.getText().toString());
-            intent.putExtra("editNoun2", mEditNoun2.getText().toString());
-            intent.putExtra("editNoun3", mEditNoun3.getText().toString());
-            intent.putExtra("editNoun4", mEditNoun4.getText().toString());
-            intent.putExtra("editAdjective1", mEditAdjective1.getText().toString());
-            intent.putExtra("editAdjective2", mEditAdjective2.getText().toString());
-            intent.putExtra("editVerb1", mEditVerb1.getText().toString());
-            intent.putExtra("editVerb2", mEditVerb2.getText().toString());
-            intent.putExtra("editVerb3", mEditVerb3.getText().toString());
+            Story story = new Story(mEditOccupation.getText().toString(),
+                mEditNoun1.getText().toString(),
+                mEditNoun2.getText().toString(),
+                mEditNoun3.getText().toString(),
+                mEditNoun4.getText().toString(),
+                mEditAdjective1.getText().toString(),
+                mEditAdjective2.getText().toString(),
+                mEditVerb1.getText().toString(),
+                mEditVerb2.getText().toString(),
+                mEditVerb3.getText().toString());
+            intent.putExtra("story", story);
             startActivity(intent);
         }
     }

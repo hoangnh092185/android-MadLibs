@@ -17,20 +17,12 @@ import butterknife.ButterKnife;
         setContentView(R.layout.activity_show_story);
         ButterKnife.bind(this);
 
-        Intent intent = getIntent();
-        String occupation = intent.getStringExtra("editOccupation");
-        String noun1 = intent.getStringExtra("editNoun1");
-        String noun2 = intent.getStringExtra("editNoun2");
-        String noun3 = intent.getStringExtra("editNoun3");
-        String noun4 = intent.getStringExtra("editNoun4");
-        String adjective1 = intent.getStringExtra("editAdjective1");
-        String adjective2 = intent.getStringExtra("editAdjective2");
-        String verb1 = intent.getStringExtra("editVerb1");
-        String verb2 = intent.getStringExtra("editVerb2");
-        String verb3 = intent.getStringExtra("editVerb3");
+//        Intent intent = getIntent();
+        Bundle data = getIntent().getExtras();
+        Story story = (Story) data.getParcelable("story");
 
-        String story = "Today a " + occupation + " named " + noun4 + " came to our school to talk to us about her job. She said the most important skill you need to know to do her job is to be able to " + verb2 + " around (a) " + adjective1 + " " + noun3 + ". She said it was easy for her to learn her job because she loved to " + verb1 + " when she was my age--and that helps a lot! If you're considering her profession, I hope you can be near (a) " + adjective2 + " " + noun1 + ". That's very important! If you get too distracted in that situation you won't be able to " + verb3 + " next to (a) " + noun2 + "!";
-        mTextStory.setText(story);
+        String madlib = "Today a " + story.Occupation + " named " + story.Noun4 + " came to our school to talk to us about her job. She said the most important skill you need to know to do her job is to be able to " + story.Verb2 + " around (a) " + story.Adjective1 + " " + story.Noun3 + ". She said it was easy for her to learn her job because she loved to " + story.Verb1 + " when she was my age--and that helps a lot! If you're considering her profession, I hope you can be near (a) " + story.Adjective2 + " " + story.Noun1 + ". That's very important! If you get too distracted in that situation you won't be able to " + story.Verb3 + " next to (a) " + story.Noun2 + "!";
+        mTextStory.setText(madlib);
 
     }
 }
