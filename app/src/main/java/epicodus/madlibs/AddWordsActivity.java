@@ -34,19 +34,42 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         if(v == mSubmitButton) {
-            Intent intent = new Intent(AddWordsActivity.this, ShowStoryActivity.class);
-            Story story = new Story(mEditOccupation.getText().toString(),
-                mEditNoun1.getText().toString(),
-                mEditNoun2.getText().toString(),
-                mEditNoun3.getText().toString(),
-                mEditNoun4.getText().toString(),
-                mEditAdjective1.getText().toString(),
-                mEditAdjective2.getText().toString(),
-                mEditVerb1.getText().toString(),
-                mEditVerb2.getText().toString(),
-                mEditVerb3.getText().toString());
-            intent.putExtra("story", story);
-            startActivity(intent);
+            if (mEditOccupation.getText().toString().trim().equals("")) {
+                mEditOccupation.setError("Field Required!");
+            } else if (mEditNoun1.getText().toString().trim().equals("")) {
+                mEditNoun1.setError("Field Required!");
+            } else if (mEditNoun2.getText().toString().trim().equals("")) {
+                mEditNoun2.setError("Field Required!");
+            } else if (mEditNoun3.getText().toString().trim().equals("")) {
+                mEditNoun3.setError("Field Required!");
+            } else if (mEditNoun4.getText().toString().trim().equals("")) {
+                mEditNoun4.setError("Field Required!");
+            } else if (mEditAdjective1.getText().toString().trim().equals("")) {
+                mEditAdjective1.setError("Field Required!");
+            } else if (mEditAdjective2.getText().toString().trim().equals("")) {
+                mEditAdjective2.setError("Field Required!");
+            } else if (mEditVerb1.getText().toString().trim().equals("")) {
+                mEditVerb1.setError("Field Required!");
+            } else if (mEditVerb2.getText().toString().trim().equals("")) {
+                mEditVerb2.setError("Field Required!");
+            } else if (mEditVerb3.getText().toString().trim().equals("")) {
+                mEditVerb3.setError("Field Required!");
+            } else {
+                Intent intent = new Intent(AddWordsActivity.this, ShowStoryActivity.class);
+                Story story = new Story(mEditOccupation.getText().toString(),
+                        mEditNoun1.getText().toString(),
+                        mEditNoun2.getText().toString(),
+                        mEditNoun3.getText().toString(),
+                        mEditNoun4.getText().toString(),
+                        mEditAdjective1.getText().toString(),
+                        mEditAdjective2.getText().toString(),
+                        mEditVerb1.getText().toString(),
+                        mEditVerb2.getText().toString(),
+                        mEditVerb3.getText().toString());
+                intent.putExtra("story", story);
+                startActivity(intent);
+
+            }
         }
     }
 
