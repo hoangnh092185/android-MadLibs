@@ -12,7 +12,8 @@
         android:textSize="24sp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/textView2" />
 
     <Button
         android:layout_width="match_parent"
@@ -22,6 +23,37 @@
         android:background="@color/colorAccent"
         android:textColor="@color/colorPrimaryText"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Holiday Mab Libs"
+        android:id="@+id/holidayPlayButton"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="79dp"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fun Mab Libs"
+        android:id="@+id/funPlayButton"
+        android:layout_below="@+id/holidayPlayButton"
+        android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Whatever Mab Libs"
+        android:id="@+id/whateverPlayButton"
+        android:layout_below="@+id/funPlayButton"
         android:layout_centerHorizontal="true"
         android:textSize="20sp"
         android:textStyle="bold" />

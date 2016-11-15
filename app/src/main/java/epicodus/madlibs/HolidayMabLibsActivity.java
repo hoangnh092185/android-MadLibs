@@ -12,15 +12,13 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class AddWordsActivity extends AppCompatActivity implements View.OnClickListener {
-    @Bind(R.id.submitButton) Button mSubmitButton;
+public class HolidayMabLibsActivity extends AppCompatActivity implements View.OnClickListener {
+    @Bind(R.id.holidaySubmitButton) Button mSubmitButton;
     @Bind(R.id.editOccupation) EditText mEditOccupation;
     @Bind(R.id.editNoun1) EditText mEditNoun1;
     @Bind(R.id.editNoun2) EditText mEditNoun2;
     @Bind(R.id.editNoun3) EditText mEditNoun3;
-    @Bind(R.id.editNoun4) EditText mEditNoun4;
     @Bind(R.id.editAdjective1) EditText mEditAdjective1;
-    @Bind(R.id.editAdjective2) EditText mEditAdjective2;
     @Bind(R.id.editVerb1) EditText mEditVerb1;
     @Bind(R.id.editVerb2) EditText mEditVerb2;
     @Bind(R.id.editVerb3) EditText mEditVerb3;
@@ -28,7 +26,7 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_words);
+        setContentView(R.layout.activity_holiday_mab_libs);
         ButterKnife.bind(this);
         mSubmitButton.setOnClickListener(this);
     }
@@ -44,12 +42,8 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
                 mEditNoun2.setError("Field Required!");
             } else if (mEditNoun3.getText().toString().trim().equals("")) {
                 mEditNoun3.setError("Field Required!");
-            } else if (mEditNoun4.getText().toString().trim().equals("")) {
-                mEditNoun4.setError("Field Required!");
-            } else if (mEditAdjective1.getText().toString().trim().equals("")) {
+            }  else if (mEditAdjective1.getText().toString().trim().equals("")) {
                 mEditAdjective1.setError("Field Required!");
-            } else if (mEditAdjective2.getText().toString().trim().equals("")) {
-                mEditAdjective2.setError("Field Required!");
             } else if (mEditVerb1.getText().toString().trim().equals("")) {
                 mEditVerb1.setError("Field Required!");
             } else if (mEditVerb2.getText().toString().trim().equals("")) {
@@ -64,11 +58,9 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
                 Nouns.add(mEditNoun1.getText().toString());
                 Nouns.add(mEditNoun2.getText().toString());
                 Nouns.add(mEditNoun3.getText().toString());
-                Nouns.add(mEditNoun4.getText().toString());
 
                 ArrayList<String> Adjectives = new ArrayList<String>();
                 Adjectives.add(mEditAdjective1.getText().toString());
-                Adjectives.add(mEditAdjective2.getText().toString());
 
                 ArrayList<String> Verbs = new ArrayList<String>();
                 Verbs.add(mEditVerb1.getText().toString());
@@ -77,11 +69,10 @@ public class AddWordsActivity extends AppCompatActivity implements View.OnClickL
 
                 Story story = new Story(Occupations, Nouns, Adjectives, Verbs);
 
-                Intent intent = new Intent(AddWordsActivity.this, ShowStoryActivity.class);
+                Intent intent = new Intent(HolidayMabLibsActivity.this, ShowStoryActivity.class);
                 intent.putExtra("story", story);
-                intent.putExtra("storyType", "normal");
+                intent.putExtra("storyType", "holiday");
                 startActivity(intent);
-
             }
         }
     }

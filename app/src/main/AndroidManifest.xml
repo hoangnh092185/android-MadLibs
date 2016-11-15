@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".AddWordsActivity" />
-        <activity android:name=".ShowStoryActivity"></activity>
+        <activity android:name=".ShowStoryActivity" />
+        <activity android:name=".HolidayMabLibsActivity"></activity>
     </application>
 
 </manifest>

@@ -11,6 +11,7 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     @Bind(R.id.playButton) Button mPlayButton;
+    @Bind(R.id.holidayPlayButton) Button mHolidayPlayButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +19,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mPlayButton.setOnClickListener(this);
+        mHolidayPlayButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         if(v == mPlayButton) {
             Intent intent = new Intent(MainActivity.this, AddWordsActivity.class);
+            startActivity(intent);
+        } else if(v == mHolidayPlayButton) {
+            Intent intent = new Intent(MainActivity.this, HolidayMabLibsActivity.class);
             startActivity(intent);
         }
     }
